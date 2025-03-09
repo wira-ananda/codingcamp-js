@@ -10,5 +10,5 @@ test('Mengembalikan hasil penjumlahan dengan benar', () => {
 
 test('Menghandle angka desimal dengan benar', () => {
   assert.strictEqual(sum(2.5, 2.5), 5);
-  assert.strictEqual(sum(0.1, 0.2), 0.3);
+  assert(Math.abs(sum(0.1, 0.2) - 0.3) < Number.EPSILON);
 });
